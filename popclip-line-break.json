@@ -1,0 +1,30 @@
+#Popclip
+{
+  "name": "Split Line",
+  "icon": "symbol:curtains.closed",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript": "
+  var text = popclip.input.text;
+  var spaces = text.match(/\\s/g);
+  if (spaces && spaces.length > 1) {
+    var halfIndex = Math.floor(text.length / 2.05);
+    var spaceIndexes = [];
+    for (var i = 0; i <= text.length; i++) {
+      if (text[i] == ' ') {
+        spaceIndexes.push(i);
+      }
+    }
+    var splitIndex = spaceIndexes.reduce(function(prev, curr) {
+      return (Math.abs(curr - halfIndex) < Math.abs(prev - halfIndex) ? curr : prev);
+    });
+    var firstPart = text.substring(0, splitIndex);
+    var secondPart = text.substring(splitIndex + 1);
+    popclip.pasteText(firstPart);
+    popclip.pasteText('\\n');
+    popclip.pasteText(secondPart);
+  }
+  "
+}

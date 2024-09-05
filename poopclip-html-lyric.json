@@ -1,0 +1,13 @@
+#Popclip
+{
+  "name": "Lyric",
+  "icon": "symbol:pencil.line",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript":
+  "var text = popclip.input.text;
+   var newText = '<p class=\"lyric\">' + text + '</p>';
+   popclip.pasteText(newText);"
+}

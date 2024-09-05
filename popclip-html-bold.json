@@ -1,0 +1,13 @@
+#Popclip
+{
+  "name": "Boldify",
+  "icon": "symbol:bold",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript":
+  "var text = popclip.input.text;
+   var newText = '<strong>' + text + '</strong>';
+   popclip.pasteText(newText);"
+}

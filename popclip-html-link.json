@@ -1,0 +1,13 @@
+#Popclip
+{
+  "name": "Link",
+  "icon": "symbol:link.icloud",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript":
+  "var text = popclip.input.text;
+   var newText = '<a href=\\\"\\\">' + text + '</a>';
+   popclip.pasteText(newText);"
+}

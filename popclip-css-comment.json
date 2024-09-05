@@ -1,0 +1,13 @@
+#Popclip
+{
+  "name": "CSS comment",
+  "icon": "symbol:text.badge.xmark",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript":
+  "var text = popclip.input.text;
+   var newText = '/* ' + text + ' */';
+   popclip.pasteText(newText);"
+}

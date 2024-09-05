@@ -1,0 +1,13 @@
+#Popclip
+{
+  "name": "Caption",
+  "icon": "symbol:text.below.photo",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript":
+  "var text = popclip.input.text;
+   var newText = '<figcaption>' + text + '</figcaption>';
+   popclip.pasteText(newText);"
+}

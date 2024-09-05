@@ -1,0 +1,13 @@
+#Popclip
+{
+  "name": "Callout",
+  "icon": "symbol:exclamationmark.bubble",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript":
+  "var text = popclip.input.text;
+   var newText = '<div class=\"callout\">' + text + '</div>';
+   popclip.pasteText(newText);"
+}

@@ -1,0 +1,13 @@
+#Popclip
+{
+  "name": "Emphasize",
+  "icon": "symbol:italic",
+  "requirements": [
+    "text",
+    "paste"
+  ],
+  "javascript":
+  "var text = popclip.input.text;
+   var newText = '<em>' + text + '</em>';
+   popclip.pasteText(newText);"
+}
